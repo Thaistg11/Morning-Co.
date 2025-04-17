@@ -1,10 +1,14 @@
 import WeatherForecast from "../Components/WeatherForecast.tsx";
 import LogoutLink from "../Components/LogoutLink.tsx";
+import NavBar from "../Components/NavBar.tsx";
 import AuthorizeView, { AuthorizedUser } from "../Components/AuthorizeView.tsx";
+
 
 function Home() {
     return (
+      
         <AuthorizeView>
+            <NavBar/>
             <span><LogoutLink>Logout <AuthorizedUser value="email" /></LogoutLink></span>
             <WeatherForecast />
             <button type="button" className="btn btn-primary">Primary</button>
@@ -15,7 +19,6 @@ function Home() {
             <button type="button" className="btn btn-info">Info</button>
             <button type="button" className="btn btn-light">Light</button>
             <button type="button" className="btn btn-dark">Dark</button>
-
         </AuthorizeView>
 
 

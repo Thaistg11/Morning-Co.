@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../Components/NavBar.tsx";
 
 function Login() {
     // state variables for email and passwords
@@ -70,6 +71,7 @@ function Login() {
     };
 
     return (
+        <> <NavBar/>
         <div className="containerbox">
             <h3>Login</h3>
             <form onSubmit={handleSubmit}>
@@ -113,7 +115,8 @@ function Login() {
                 </div>
             </form>
             {error && <p className="error">{error}</p>}
-        </div>
+            </div>
+        </>
     );
 }
 
