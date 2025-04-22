@@ -1,14 +1,15 @@
-﻿#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+﻿body {
+    margin: 0;
+    padding: 0;
+
 }
 
+/*Start Weather Forecast*/
 th, td {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+/*End Weather Forecast*/
 
 .containerbox {
     border-radius: 10px;
@@ -17,3 +18,29 @@ th, td {
     padding: 20px;
     text-align: left;
 }
+
+/*Start NavBar*/
+nav {
+    align-items: center;
+}
+
+nav.font{
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+}
+/*End NavBar*/
+
+/*Start Footer*/
+
+/*End Footer*/
+
+/* Start Caroulsel*/
+.custom-carousel {
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+/* End Caroulsel*/

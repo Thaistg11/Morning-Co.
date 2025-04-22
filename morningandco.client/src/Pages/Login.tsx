@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../Components/NavBar.tsx";
 
+
 function Login() {
     // state variables for email and passwords
     const [email, setEmail] = useState<string>("");
@@ -116,6 +117,7 @@ function Login() {
             </form>
             {error && <p className="error">{error}</p>}
             </div>
+            
         </>
     );
 }

@@ -1,9 +1,18 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../App.css';
+import React from 'react';
+
 
 const NavBar = () => {
     return (
+        
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+            </style>
+          
+             <h1 className="navFont"> Morning & Co.</h1>
+               
+            
             <button
                 className="navbar-toggler"
                 type="button"

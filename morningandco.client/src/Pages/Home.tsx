@@ -2,6 +2,7 @@ import WeatherForecast from "../Components/WeatherForecast.tsx";
 import LogoutLink from "../Components/LogoutLink.tsx";
 import NavBar from "../Components/NavBar.tsx";
 import AuthorizeView, { AuthorizedUser } from "../Components/AuthorizeView.tsx";
+import Footer from "../Components/Footer.tsx";
 
 
 function Home() {
@@ -19,6 +20,8 @@ function Home() {
             <button type="button" className="btn btn-info">Info</button>
             <button type="button" className="btn btn-light">Light</button>
             <button type="button" className="btn btn-dark">Dark</button>
+            <Footer/>
+
         </AuthorizeView>
 
 
