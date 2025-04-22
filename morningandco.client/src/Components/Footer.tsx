@@ -2,25 +2,26 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="text-center text-white" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
+        <footer className="text-center text-white" style={{ backgroundColor: "rgba(10, 10, 10, 1)" }}>
             <div className="container pt-4">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
                 <section className="mb-4">
                     <a className="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button">
-                        <i className="bi bi-facebook"></i>
+                        <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" className="fa fa-facebook"></a>
                     </a>
 
                     <a className="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button">
-                        <i className="bi bi-google"></i>
+                        <a href="https://www.google.co.uk/maps/" className="fa fa-google"></a>
                     </a>
 
                     <a className="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button">
-                        <i className="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/" className="fa fa-instagram"></a>
                     </a>
                 </section>
             </div>
 
-            <div className="text-center text-dark p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
-                <a className="text-dark">Morning & Co</a>
+            <div >
+                <h4 className="footer.Font">Morning & Co</h4>
             </div>
         </footer>
     );

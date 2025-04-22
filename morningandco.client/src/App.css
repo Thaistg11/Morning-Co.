@@ -15,32 +15,88 @@ th, td {
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: left;
 }
 
 /*Start NavBar*/
-nav {
-    align-items: center;
+
+.custom-nav {
+    background-color: #0A0A0A !important;
+    color: yellow;
+   
 }
 
-nav.font{
-  font-family: "League Spartan", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
 
+.nav.font {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+}
+.navLogo {
+   width: 200px;
+   height: 160px;
+}
+a.nav-link{
+    color:white;
 }
 /*End NavBar*/
 
 /*Start Footer*/
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: grey;
+}
 
-/*End Footer*/
+footer.Font {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    color:red;
+}
+    /*End Footer*/
 
-/* Start Caroulsel*/
+
+    /* Start Caroulsel*/
 .custom-carousel {
     max-width: 100%;
     margin: 0 auto;
+    margin-bottom: 200px;
     
 }
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+    .carousel-caption h1 {
+        font-size: 5.5vw;
+    }
+
+    .carousel-caption h3 {
+        font-size: 3vw;
+    }
+
+    .hero-btn {
+    background-color: #0a7557;
+    color: #ffffff;
+    }
+
+    .hero-btn:hover {
+        color: #0a7557;
+        background-color: #ffffff;
+    }
+
 /* End Caroulsel*/

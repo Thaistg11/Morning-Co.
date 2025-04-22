@@ -1,26 +1,33 @@
 import React from 'react';
-import CoffeeImg from '../Img/Coffee2.jpg';
-import FocacciaImg from '../Img/Focaccia.jpg';
-//import IceCoffeeImg from '../Img/Ice-Coffee.jpg';//
+import CoffeeEditImg from '../Img/CoffeeEdit.jpg';
+import FocacciaEditImg from '../Img/FocacciaEdit.jpg';
 
 const HomeContainer = () => {
     return (
+        <div> 
+            {/*Start Carrosel*/}
         <div className="custom-carousel">
             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                 <li className="carousel-indicators">
                     <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"></li>
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li> 
                 </li>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img className="d-block w-100" src={CoffeeImg} alt="First slide" />
+                        <img className="d-block w-100" src={CoffeeEditImg} alt="First slide" />
+                        <div className="carousel-caption">
+                            <h1 className="h1">Morning&Co</h1>
+                            <h2 className="h2">Where comfort meets coffee</h2>
+                            <div className="row justify-content-center">
+                                <div className="col">
+                                    <a href="{% url 'menu' %}" className="btn hero-btn">Check our menu</a>
+                                </div>
+                            </div>
+                        </div>
                 </div>
-                {/* <div className="carousel-item">
-                    <img className="d-block w-100" src={IceCoffeeImg} alt="Second slide" />
-                </div> */}
+                
                 <div className="carousel-item">
-                    <img className="d-block w-100" src={FocacciaImg} alt="Third slide" />
+                        <img className="d-block w-100" src={FocacciaEditImg} alt="Second slide" />
                 </div>
             </div>
             <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -31,10 +38,18 @@ const HomeContainer = () => {
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Next</span>
             </a>
+            </div>
+        </div>
+            {/*End Carrosel*/}
 
-            </div>
-            </div>
-       
+            {/* Start About Us*/}
+            <section>
+
+
+            </section>
+            {/* End About Us*/}
+
+        </div>
     );
 };
 

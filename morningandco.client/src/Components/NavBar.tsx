@@ -1,18 +1,22 @@
 import '../App.css';
 import React from 'react';
+import LogoImg from '../Img/Logo.jpg';
+
 
 
 const NavBar = () => {
     return (
-        
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg custom-nav flex-column align-items-center">
+
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
             </style>
-          
-             <h1 className="navFont"> Morning & Co.</h1>
-               
-            
+
+         
+            <div className="text-center mb-2">
+                <img className="navLogo" src={LogoImg} alt="Logo" />
+            </div>
+
             <button
                 className="navbar-toggler"
                 type="button"
@@ -24,10 +28,11 @@ const NavBar = () => {
             >
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
+
+            <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/">Menu</a>
+                        <a className="nav-link" aria-current="page" href="/">Menu</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="/features">Locations</a>
