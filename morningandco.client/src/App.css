@@ -22,8 +22,8 @@ th, td {
 /*Start NavBar*/
 
 .custom-nav {
-    background-color: #0A0A0A !important;
-    color: yellow;
+    background-color: white !important;
+    
    
 }
 
@@ -32,14 +32,15 @@ th, td {
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: white;
+    color: black;
 }
 .navLogo {
-   width: 200px;
-   height: 160px;
+   width: 163px;
+   height: 80px;
 }
 a.nav-link{
-    color:white;
+    color:black;
+    font-size:20px;
 }
 /*End NavBar*/
 
@@ -60,7 +61,7 @@ footer.Font {
     font-weight: <weight>;
     font-style: normal;
     color:red;
-}
+}00
     /*End Footer*/
 
 
