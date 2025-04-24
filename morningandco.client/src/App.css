@@ -44,32 +44,14 @@ a.nav-link{
 }
 /*End NavBar*/
 
-/*Start Footer*/
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    color: grey;
-}
 
-footer.Font {
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    color:red;
-}00
-    /*End Footer*/
 
 
     /* Start Caroulsel*/
 .custom-carousel {
     max-width: 100%;
     margin: 0 auto;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     
 }
 .carousel-caption {
@@ -101,3 +83,66 @@ footer.Font {
     }
 
 /* End Caroulsel*/
+
+/* Start Image Grid*/
+
+.row {
+    padding-bottom: 10px;
+  
+}
+
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* End Image Grid*/
+
+/*Start Footer*/
+.custom-Footer {
+    padding-bottom: 10px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: grey;
+   
+}
+
+footer.Font {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    
+}
+/*End Footer*/
