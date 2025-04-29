@@ -1,22 +1,21 @@
 import NavBar from "../Components/NavBar.tsx";
 import Footer from "../Components/Footer.tsx";
-import HomeContainer from "../Components/HomeContainer.tsx";
+import Menu from "../Components/Menu.tsx";
 
-
-function HomePage () {
+function MenuPage() {
 
 
     return (
         <>
             <NavBar />
 
-            <HomeContainer />
+            <Menu />
 
             <Footer />
-            
+
 
         </>
     );
 }
 
-export default HomePage;
+export default MenuPage;

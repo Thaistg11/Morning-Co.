@@ -60,11 +60,10 @@ a.nav-link{
     bottom: initial;
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
 }
 
-    .carousel-caption h1 {
+  .carousel-caption h1 {
         font-size: 5.5vw;
     }
 
@@ -72,77 +71,105 @@ a.nav-link{
         font-size: 3vw;
     }
 
-    .hero-btn {
-    background-color: #0a7557;
-    color: #ffffff;
-    }
 
-    .hero-btn:hover {
-        color: #0a7557;
-        background-color: #ffffff;
-    }
-
-/* End Caroulsel*/
-
-/* Start Image Grid*/
-
-.row {
-    padding-bottom: 10px;
-  
-}
-
-.column {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-    .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-    }
-
-@media screen and (max-width: 800px) {
-    .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .column {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-/* End Image Grid*/
-
-/*Start Footer*/
-.custom-Footer {
-    padding-bottom: 10px;
-}
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
+.btn.hero-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: #9d611d;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
     text-decoration: none;
-    border-radius: 50%;
-    color: grey;
-   
+    display: inline-block;
 }
 
-footer.Font {
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    
+ btn.hero-btn:hover {
+    background-color: black;
+    transform: scale(1.1);
 }
-/*End Footer*/
+
+@media (max-width: 768px) {
+    .btn.hero-btn {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn.hero-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    /* End Caroulsel*/
+
+
+    /* Start beginning about us section*/
+    .about-us-section p {
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    /*End about us section*/
+
+
+
+
+    /* Start Image Grid*/
+
+    .column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+        margin-bottom: 40px;
+    }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+
+    /* End Image Grid*/
+
+    /*Start Footer*/
+    .custom-Footer {
+        padding-bottom: 10px;
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        color: white;
+    }
+
+    footer.Font {
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: white;
+    }
+    /*End Footer*/
+

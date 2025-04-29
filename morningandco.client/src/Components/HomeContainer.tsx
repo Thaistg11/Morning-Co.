@@ -10,7 +10,11 @@ import BrunchImg from '../Img/Brunch.jpg';
 import PancakeImg from '../Img/Pancake.jpg';
 
 
-const HomeContainer = () => {
+
+
+
+
+const HomeContainer: React.FC = () => {
     return (
         <div> 
             {/*Start Carrosel*/}
@@ -25,10 +29,9 @@ const HomeContainer = () => {
                             <img className="d-block w-100" src={FocacciaImg}  alt="First slide" />
                         <div className="carousel-caption">
                                 <h1 className="h1">Welcome to Your Favorite Coffee Spot</h1>
-                                <h2 className="h2">Where comfort meets coffee</h2>
                             <div className="row justify-content-center">
                                 <div className="col">
-                                    <a href="{% url 'menu' %}" className="btn hero-btn">Check our menu</a>
+                                        <a href="/menu" className="btn hero-btn">Check our menu</a>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +40,7 @@ const HomeContainer = () => {
                 <div className="carousel-item">
                             <img className="d-block w-100" src={CoffeeImg} alt="Second slide" />
                             <div className="carousel-caption">
-                                <h2 className="h1">Come for the coffee, stay for the brunch</h2>
+                                <h1 className="h1">Come for the coffee, stay for the brunch</h1>
                                 <div className="row justify-content-center">
                                     <div className="col">
                                         <a href="{% url 'menu' %}" className="btn hero-btn">Book a table</a>
@@ -60,19 +63,17 @@ const HomeContainer = () => {
 
             {/* Start About Us*/}
             <section>
-                <div className="container about-us-section">
-                    <div className="row mt-5 mx-1 align-items-center">
+                <div className="container-about-us-section">
+                    <div className="row mt-5 mx-1 justify-content-center">
                         <div className="col-12 col-lg-8">
-                            <h2>About Us </h2>
+                            <h2 className="mb-4 text-center">Our Story</h2>
                             <p className="text-justify">Morning&Co is more than just a coffee shop, it's a space where craft and comfort come together.
                                 We offer signature coffees brewed from high-quality beans, providing a rich, memorable experience in every sip. </p>
                             <p className="text-justify">Our brunch menu, crafted by a Le Cordon Bleu-trained chef, blends culinary expertise with feel-good flavors,
                                 offering everything from fresh pastries to hearty dishes, blending elegance with coziness in every bite.</p>
                            
                         </div>
-                        <div className="d-none d-lg-block col-lg-4">
-                            {/*<img src={ } className="img-fluid" alt="About us image">*/}
-                        </div>
+                        
                     </div>
                 </div> 
 
@@ -87,8 +88,6 @@ const HomeContainer = () => {
                     <div className="column col-12 col-sm-6 col-md-3">
                         <img src={CellingImg} style={{ width: "100%" }} alt="Celling" />
                         <img src={BrunchImg} style={{ width: "100%" }} alt="Brunch" />
-
-                       
                     </div>
                     <div className="column col-12 col-sm-6 col-md-3">
                         <img src={BrunchImg} style={{ width: "100%" }} alt="Brunch" />
@@ -107,7 +106,10 @@ const HomeContainer = () => {
             </section>
             {/* End Photo Gallery */}
 
+           
 
+
+         
         </div>
     );
 };
