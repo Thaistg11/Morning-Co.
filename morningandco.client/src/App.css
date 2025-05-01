@@ -1,7 +1,6 @@
 ﻿body {
     margin: 0;
     padding: 0;
-
 }
 
 /*Start Weather Forecast*/
@@ -23,8 +22,6 @@ th, td {
 
 .custom-nav {
     background-color: white !important;
-    
-   
 }
 
 
@@ -34,26 +31,28 @@ th, td {
     font-style: normal;
     color: black;
 }
+
 .navLogo {
-   width: 163px;
-   height: 80px;
+    width: 163px;
+    height: 80px;
 }
-a.nav-link{
-    color:black;
-    font-size:20px;
+
+a.nav-link {
+    color: black;
+    font-size: 20px;
 }
 /*End NavBar*/
 
 
 
 
-    /* Start Caroulsel*/
+/* Start Caroulsel*/
 .custom-carousel {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 50px;
-    
 }
+
 .carousel-caption {
     top: 50%;
     transform: translateY(-50%);
@@ -63,7 +62,7 @@ a.nav-link{
     font-style: normal;
 }
 
-  .carousel-caption h1 {
+    .carousel-caption h1 {
         font-size: 5.5vw;
     }
 
@@ -85,7 +84,7 @@ a.nav-link{
     display: inline-block;
 }
 
- btn.hero-btn:hover {
+btn.hero-btn:hover {
     background-color: black;
     transform: scale(1.1);
 }
@@ -102,6 +101,7 @@ a.nav-link{
         padding: 6px 12px;
         font-size: 12px;
     }
+}
     /* End Caroulsel*/
 
 
@@ -149,6 +149,38 @@ a.nav-link{
     }
 
     /* End Image Grid*/
+.menu-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.menu-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+}
+
+     
+    /* Start Menu Page Grid*/
+
+/* End Menu Page Grid*/
+
 
     /*Start Footer*/
     .custom-Footer {
@@ -166,10 +198,7 @@ a.nav-link{
     }
 
     footer.Font {
-        font-family: "League Spartan", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
+        
         color: white;
     }
     /*End Footer*/
-
