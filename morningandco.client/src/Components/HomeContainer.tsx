@@ -8,6 +8,7 @@ import SanduichImg from '../Img/Sanduich.jpg';
 import CellingImg from '../Img/Celling.jpg';
 import BrunchImg from '../Img/Brunch.jpg';
 import PancakeImg from '../Img/Pancake.jpg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -31,7 +32,7 @@ const HomeContainer: React.FC = () => {
                                 <h1 className="h1">Welcome to Your Favorite Coffee Spot</h1>
                             <div className="row justify-content-center">
                                 <div className="col">
-                                        <a href="/menu" className="btn hero-btn">Check our menu</a>
+                                        <Link to="/Menu" className="btn hero-btn">Check our menu</Link>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +44,7 @@ const HomeContainer: React.FC = () => {
                                 <h1 className="h1">Come for the coffee, stay for the brunch</h1>
                                 <div className="row justify-content-center">
                                     <div className="col">
-                                        <a href="{% url 'menu' %}" className="btn hero-btn">Book a table</a>
+                                        <Link to="/Reservations" className="btn hero-btn">Book a table</Link>
                                     </div>
                                 </div>
                             </div>

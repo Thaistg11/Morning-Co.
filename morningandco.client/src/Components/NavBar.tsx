@@ -43,7 +43,7 @@ const NavBar = () => {
                             <Link className="nav-link" to="/Menu">Menu</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/features">Locations</a>
+                            <Link className="nav-link" to="/Locations">Locations</Link>
                         </li>
                     </ul>
                 </div>
@@ -58,10 +58,10 @@ const NavBar = () => {
                 <div className="d-flex flex-lg-row flex-column">
                     <ul className="navbar-nav flex-column flex-lg-row me-auto mb-2 mb-lg-0">
                         <li className="nav-item me-3">
-                            <a className="nav-link" href="/pricing">Reservations</a>
+                            <Link className="nav-link" to="/Reservations">Reservations</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/pricing">Photo Gallery</a>
+                            <Link className="nav-link" to="/ContactUs">Contact Us</Link>
                         </li>
                     </ul>
                 </div>

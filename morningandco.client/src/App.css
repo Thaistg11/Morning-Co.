@@ -149,6 +149,9 @@ btn.hero-btn:hover {
     }
 
     /* End Image Grid*/
+
+
+/* Start Menu Page Grid*/
 .menu-container {
     display: flex;
     justify-content: center;
@@ -176,16 +179,30 @@ btn.hero-btn:hover {
     border-radius: 8px;
 }
 
-     
-    /* Start Menu Page Grid*/
 
 /* End Menu Page Grid*/
 
 
-    /*Start Footer*/
-    .custom-Footer {
-        padding-bottom: 10px;
-    }
+/* Start  Location Page Grid*/
+.map {
+    height: 400px;
+    width: 400px
+}
+.map-marker {
+    margin-top: -30px;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+/* End Location Page Grid*/
+
+
+
+
+/*Start Footer*/
+.custom-Footer {
+    padding-bottom: 10px;
+}
 
     .fa {
         padding: 20px;
