@@ -2,6 +2,7 @@ import '../App.css';
 import React from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
+
 const googleMapsKey = import.meta.env.VITE_GOOGLE_MAP_API_KEY;
 
 
@@ -17,6 +18,12 @@ const Locations = () => {
     }
 
     return (
+
+        <div> 
+
+        <div className="location-container"> 
+        
+
         <div className="map">
             {isLoaded ? (
                 <GoogleMap
@@ -35,7 +42,32 @@ const Locations = () => {
             ) : (
                 <>Loading...</>
             )}
+            </div>
+
+       
+
         </div>
+            <section>
+                <div className="location-adress">
+                    <div className="row mt-5 mx-1 justify-content-center">
+                        <div className="col-12 col-lg-8">
+                            <h1 className="mb-4 text-center">Cheltenham</h1>
+                            <h3 className="mb-4 text-center"> 103 London Road </h3>
+                            
+                            <p className="mb-4 text-center"> 08:00 to 15:00 Weekdays </p>
+                            <p className="mb-4 text-center"> 09:00 to 15:00 Weekends </p>
+                                
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+
     );
 };
 

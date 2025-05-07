@@ -64,7 +64,7 @@ const HomeContainer: React.FC = () => {
 
             {/* Start About Us*/}
             <section>
-                <div className="container-about-us-section">
+                
                     <div className="row mt-5 mx-1 justify-content-center">
                         <div className="col-12 col-lg-8">
                             <h2 className="mb-4 text-center">Our Story</h2>
@@ -76,7 +76,7 @@ const HomeContainer: React.FC = () => {
                         </div>
                         
                     </div>
-                </div> 
+                
 
             </section>
             {/* End About Us*/}
