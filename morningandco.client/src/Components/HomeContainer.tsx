@@ -83,7 +83,7 @@ const HomeContainer: React.FC = () => {
 
 
             {/* Start Photo Gallery */}
-            <section className="photo-gallery container mt-5">
+            <section className="photo-gallery-container mt-5">
                 <h2 className="mb-4 text-center">Gallery</h2>
                 <div className="row">
                     <div className="column col-12 col-sm-6 col-md-3">

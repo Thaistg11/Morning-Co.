@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../Components/NavBar.tsx";
+import Footer from "../Components/Footer.tsx";
 
 
 function Login() {
@@ -72,53 +73,76 @@ function Login() {
     };
 
     return (
-        <> <NavBar/>
-        <div className="containerbox">
-            <h3>Login</h3>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label className="forminput" htmlFor="email">Email:</label>
-                </div>
-                <div>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={email}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
-                </div>
-                <div>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        value={password}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <input
-                        type="checkbox"
-                        id="rememberme"
-                        name="rememberme"
-                        checked={rememberme}
-                        onChange={handleChange} /><span>Remember Me</span>
-                </div>
-                <div>
-                    <button type="submit">Login</button>
-                </div>
-                <div>
-                    <button onClick={handleRegisterClick}>Register</button>
-                </div>
-            </form>
-            {error && <p className="error">{error}</p>}
-            </div>
-            
+        <>
+            <NavBar />
+            <div className="contact-container">
+  
+                 
+               
+                <form onSubmit={handleSubmit}>
+
+                    <div className="form-outline mb-4">
+                        <h1 className="text-login"> Log in</h1>
+
+                        <label className="form-label" htmlFor="email">Email</label>
+                        
+                        <input className="form-control"
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={email}
+                            onChange={handleChange}
+                        />
+                    </div>
+
+               
+                    <div className="form-outline mb-4">
+                        <label className="form-label" htmlFor="password">Password</label>
+                    
+                        <input className="form-control"
+                            type="password"
+                            id="password"
+                            name="password"
+                            value={password}
+                            onChange={handleChange}
+                        />
+                    </div>
+
+
+                    <div className="row mb-4">
+                        <div className="col d-flex justify-content-center">
+                            <div className="form-check">
+                                <input className="form-check-input"
+                                    type="checkbox"
+                                    id="rememberme"
+                                    name="rememberme"
+                                    checked={rememberme}
+                                    onChange={handleChange} /><span>Remember Me</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                           
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-dark btn-block mb-4 w-100">Login</button> 
+                        
+                    </div>
+
+                    <div className="text-center">
+                        <p>Not a member? <a onClick={handleRegisterClick}>Register</a></p>
+                        
+                    </div>
+
+
+                </form>
+                {error && <p className="error">{error}</p>}
+                    </div>
+
+
+            <Footer />
         </>
+         
     );
 }
 

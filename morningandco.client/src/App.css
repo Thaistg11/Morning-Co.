@@ -117,14 +117,17 @@ btn.hero-btn:hover {
 
 
     /* Start Image Grid*/
+.photo-gallery-container{
+    margin-bottom: 70px;
+    
+}
 
-    .column {
-        -ms-flex: 25%; /* IE10 */
-        flex: 25%;
-        max-width: 25%;
-        padding: 0 4px;
-        margin-bottom: 40px;
-    }
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
 
         .column img {
             margin-top: 8px;
@@ -156,6 +159,7 @@ btn.hero-btn:hover {
     display: flex;
     justify-content: center;
     padding: 2rem 1rem;
+    margin-bottom: 50px;
 }
 
 .menu-content {
@@ -219,14 +223,89 @@ btn.hero-btn:hover {
     font-style: normal;
 }
 
-.location-adress {
+.adress-times {
     font-size: 2rem;
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size:20px;
+    font-size: 20px;
 }
+
+.adress-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.oppening-times {
+    padding-bottom: 50px;
+}
+
 /* End Location Page Grid*/
+
+
+/*Start Contact Us page*/
+.contact-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+   
+}
+.main-container {
+    
+}
+
+.contact3 {
+    font-size: 2rem;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+}
+
+    .contact3 .font-weight-medium {
+        font-weight: 500;
+    }
+    
+
+.contact3 .card-shadow {
+        -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+        box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    }
+
+.btn-container {
+    text-align:end;
+}
+
+.btn-danger-gradiant {
+    background-color: #9d611d;
+    color: white;
+    transition: all 0.3s ease;
+    text-align: end;
+    margin-bottom: 50px;
+}
+
+    .btn-danger-gradiant:hover {
+        background-color: black;
+        transform: scale(1.1);
+    }
+
+
+.contact-text{
+    text-align:center;
+}
+
+/*EndContact Us page*/
+
+/*Start Login Page*/
+.text-login {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+
+
+/*End Login Page*/
 
 /*Start Footer*/
 .custom-Footer {
