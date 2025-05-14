@@ -1,4 +1,6 @@
-﻿body {
+﻿
+
+body {
     margin: 0;
     padding: 0;
 }
@@ -290,8 +292,9 @@ btn.hero-btn:hover {
     }
 
 
-.contact-text{
-    text-align:center;
+.contact-text {
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 /*EndContact Us page*/
@@ -302,11 +305,23 @@ btn.hero-btn:hover {
     letter-spacing: 2px;
     margin-top: 15px;
 }
-
-
+.btn-login {
+    
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 
 /*End Login Page*/
 
+/*Start Reservation Page*/
+.header-text {
+    color: white;
+   
+}
+/*End Reservation Page*/
 /*Start Footer*/
 .custom-Footer {
     padding-bottom: 10px;

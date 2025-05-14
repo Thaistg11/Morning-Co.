@@ -75,7 +75,7 @@ function Login() {
     return (
         <>
             <NavBar />
-            <div className="contact-container">
+            <div className="login-container">
   
                  
                
