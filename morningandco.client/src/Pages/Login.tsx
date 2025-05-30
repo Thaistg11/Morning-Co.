@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, Navigate } from "react-router-dom";
 import NavBar from "../Components/NavBar.tsx";
 import Footer from "../Components/Footer.tsx";
 
@@ -11,7 +11,28 @@ function Login() {
     const [rememberme, setRememberme] = useState<boolean>(false);
     // state variable for error messages
     const [error, setError] = useState<string>("");
+    const [loading, setLoading] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
     const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch("/pingauth", {
+            method: "GET",
+            credentials: "include", // include cookies in the request
+        })
+            .then((res) => {
+                if (res.status === 200) {
+                    setIsAuthenticated(true);
+                }
+            })
+            .catch(() => {
+                setIsAuthenticated(false);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, []);
 
     // handle change events for input fields
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -71,6 +92,9 @@ function Login() {
                 });
         }
     };
+
+    if (loading) return <p>Loading...</p>;
+    if (isAuthenticated) return <Navigate to="/Reservations" />;
 
     return (
         <>

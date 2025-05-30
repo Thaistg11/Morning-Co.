@@ -85,4 +85,6 @@ export function AuthorizedUser(props: { value: string }) {
     return null;
 }
 
+export { UserContext };
+
 export default AuthorizeView;

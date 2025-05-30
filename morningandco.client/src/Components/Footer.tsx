@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -21,6 +22,14 @@ const Footer = () => {
                             rel="noopener noreferrer"></a>
                     </a>
                 </section>
+
+                
+
+
+              
+                        <Link className="footer-link" to="/ContactUs">Contact Us</Link>
+                   
+
             </div>
 
             

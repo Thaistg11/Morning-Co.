@@ -5,6 +5,7 @@ import AuthorizeView, { AuthorizedUser } from "../Components/AuthorizeView.tsx";
 import Footer from "../Components/Footer.tsx";
 
 
+
 function Home() {
     return (
       
@@ -12,7 +13,9 @@ function Home() {
             <NavBar/>
             <span><LogoutLink>Logout <AuthorizedUser value="email" /></LogoutLink></span>
             <WeatherForecast />
-  
+
+
+           
             <Footer/>
 
         </AuthorizeView>

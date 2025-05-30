@@ -2,17 +2,11 @@ import '../App.css';
 import React from 'react';
 import LogoMiniImg from '../Img/LogoMini.png';
 import { Link } from 'react-router-dom';
-import LogoutLink from "../Components/LogoutLink.tsx";
-import { AuthorizedUser, UserContext} from "../Components/AuthorizeView.tsx";
+
 
 
 const NavBar = () => {
-
-    const user = React.useContext(UserContext); // gets the current user
-    const isLoggedIn = !!user.email;
-
     return (
-
         <nav className="navbar navbar-expand-lg custom-nav px-4 py-3">
 
             <style>
@@ -66,17 +60,10 @@ const NavBar = () => {
                         <li className="nav-item me-3">
                             <Link className="nav-link" to="/Reservations">Reservations</Link>
                         </li>
-
-                        <li className="nav-item">
-                            {isLoggedIn ? (
-                                
-                                <span className="nav-link"><LogoutLink >Logout </LogoutLink></span>
-                            )
-                                : (
-                                    <Link className="nav-link" to="/Login">Log In</Link>
-                                )}
-  
-                        </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/Login">Log In</Link>
+                            </li>
+                        
                     </ul>
                 </div>
 
