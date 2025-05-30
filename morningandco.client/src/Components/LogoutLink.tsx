@@ -1,9 +1,9 @@
 /* eslint-disable no-empty */
-import { useNavigate } from "react-router-dom";
+
 
 function LogoutLink(props: { children: React.ReactNode }) {
 
-    const navigate = useNavigate();
+    
 
 
     const handleSubmit = (e: React.FormEvent<HTMLAnchorElement>) => {
@@ -19,7 +19,7 @@ function LogoutLink(props: { children: React.ReactNode }) {
             .then((data) => {
                 if (data.ok) {
 
-                    navigate("/login");
+                    window.location.href = "/HomePage";
                 }
                 else { }
 

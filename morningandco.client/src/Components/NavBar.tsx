@@ -3,15 +3,18 @@ import React from 'react';
 import LogoMiniImg from '../Img/LogoMini.png';
 import { Link } from 'react-router-dom';
 import LogoutLink from "../Components/LogoutLink.tsx";
-import { AuthorizedUser, UserContext} from "../Components/AuthorizeView.tsx";
+import { useAuth } from "./AuthContext";
+
 
 
 const NavBar = () => {
 
-    const user = React.useContext(UserContext); // gets the current user
-    const isLoggedIn = !!user.email;
+    const { authorized, user, loading } = useAuth();
+
+    if (loading) return null;
 
     return (
+
 
         <nav className="navbar navbar-expand-lg custom-nav px-4 py-3">
 
@@ -68,7 +71,7 @@ const NavBar = () => {
                         </li>
 
                         <li className="nav-item">
-                            {isLoggedIn ? (
+                            {authorized ? (
                                 
                                 <span className="nav-link"><LogoutLink >Logout </LogoutLink></span>
                             )

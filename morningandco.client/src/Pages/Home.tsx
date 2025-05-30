@@ -11,7 +11,7 @@ function Home() {
       
         <AuthorizeView>
             <NavBar/>
-            <span><LogoutLink>Logout <AuthorizedUser value="email" /></LogoutLink></span>
+           
             <WeatherForecast />
 
 

@@ -71,7 +71,7 @@ function AuthorizeView(props: { children: React.ReactNode }) {
             </UserContext.Provider>
         );
     } else {
-        return <Navigate to="/login" />;
+        return <Navigate to="/login"/>;
     }
 }
 
