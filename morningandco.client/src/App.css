@@ -311,9 +311,7 @@ btn.hero-btn:hover {
     letter-spacing: 2px;
     margin-top: 15px;
 }
-.btn-login {
-    
-}
+
 .login-container {
     display: flex;
     justify-content: center;
@@ -322,12 +320,35 @@ btn.hero-btn:hover {
 
 /*End Login Page*/
 
+
+/*Start Register Page*/
+.register-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.text-register {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+.btn-register{
+    margin-top: 20px;
+}
+
+
+/*End Register Page*/
+
+
 /*Start Reservation Page*/
 .header-text {
     color: white;
-   
 }
 /*End Reservation Page*/
+
+
 /*Start Footer*/
 .custom-Footer {
     padding-bottom: 10px;

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../Components/NavBar.tsx";
+import Footer from "../Components/Footer.tsx";
 
 
 function Register() {
@@ -76,104 +78,127 @@ function Register() {
     };
 
     return (
-        <div className="containerbox">
-            <h3>Register</h3>
+        <>
+           <NavBar />
+
+        <div className="register-container">
+
+            <div className="form-outline mb-4">
+                    <h1 className="text-register"> Register</h1>
 
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                </div><div>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={email}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="password">Password:</label></div><div>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        value={password}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="name">First Name:</label>
-                </div>
-                <div>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={name}
-                        onChange={handleChange}
-                    />
-                </div>
 
                 <div>
-                    <label htmlFor="surname">Surname:</label>
-                </div>
-                <div>
-                    <input
-                        type="text"
-                        id="surname"
-                        name="surname"
-                        value={surname}
-                        onChange={handleChange}
-                    />
+                     <label className="form-label" htmlFor="name">First Name </label>
+  
+                         <input className="form-control"
+                         type="text"
+                         id="name"
+                         name="name"
+                            value={name}
+                         onChange={handleChange}
+                         />
                 </div>
 
+
+
                 <div>
-                    <label htmlFor="dob">Date of Birth:</label>
+                     <label className="form-label" htmlFor="surname">Surname</label>
+               
+                         <input className="form-control"
+                         type="text"
+                         id="surname"
+                         name="surname"
+                         value={surname}
+                         onChange={handleChange}
+                        />
                 </div>
+
+
+
                 <div>
-                    <input
+                     <label className="form-label"  htmlFor="dob">Date of Birth</label>
+                
+                        <input className="form-control"
                         type="date"
                         id="dob"
                         name="dob"
                         value={dob}
                         onChange={handleChange}
-                    />
+                       />
                 </div>
 
-                <div>
-                    <label htmlFor="username">Username:</label>
-                </div>
-                <div>
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        value={username}
-                        onChange={handleChange}
-                    />
-                </div>
+
 
                 <div>
-                    <label htmlFor="confirmPassword">Confirm Password:</label></div><div>
-                    <input
+
+                   <label className="form-label" htmlFor="username">Username </label>
+                
+                   <input className="form-control"
+                   type="text"
+                   id="username"
+                    name="username"
+                    value={username}
+                    onChange={handleChange}
+                   />
+                        </div>
+
+                 <div >
+
+                        <label className="form-label" htmlFor="email">Email </label>
+
+                            <input className="form-control"
+                             type="email"
+                             id="email"
+                             name="email"
+                             value={email}
+                             onChange={handleChange}
+                            />
+                        </div>
+
+              <div>
+                  <label className="form-label" htmlFor="password">Password </label>
+
+                     <input className="form-control"
+                       type="password"
+                       id="password"
+                      name="password"
+                       value={password}
+                      onChange={handleChange}
+                      />
+               </div>     
+
+                <div>
+                     <label className="form-label" htmlFor="confirmPassword">Confirm Password</label></div><div>
+
+                       <input className="form-control"
                         type="password"
                         id="confirmPassword"
                         name="confirmPassword"
                         value={confirmPassword}
                         onChange={handleChange}
-                    />
+                       />
                 </div>
-                <div>
-                    <button type="submit">Register</button>
 
-                </div>
+                        
+
                 <div>
-                    <button onClick={handleLoginClick}>Go to Login</button>
+                            <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn-register btn btn-dark btn-block mb-4 w-100">Register</button>
+
+                        </div>
+
+                <div>
+                     <button data-mdb-button-init data-mdb-ripple-init className="btn btn-dark btn-block mb-4 w-100" onClick={handleLoginClick}>Go to Login</button>
                 </div>
             </form>
 
             {error && <p className="error">{error}</p>}
-        </div>
+            </div>
+
+            </div>
+
+            <Footer />
+        </>
     );
 }
 
