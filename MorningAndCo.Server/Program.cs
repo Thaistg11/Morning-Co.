@@ -16,6 +16,16 @@ namespace MorningAndCo.Server
             var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
 
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+            //change
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
 
             builder.Services.AddAuthorization();
             builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
@@ -29,6 +39,8 @@ namespace MorningAndCo.Server
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+            //change
+            app.UseCors();
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
@@ -56,6 +68,7 @@ namespace MorningAndCo.Server
                 app.UseSwaggerUI();
             }
 
+            app.UseCors();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

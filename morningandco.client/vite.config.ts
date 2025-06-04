@@ -59,6 +59,10 @@ export default defineConfig({
                 target: 'https://localhost:7241/',
                 secure: false
             },
+            '/api/Account/register': {
+                target: 'https://localhost:7241',
+                secure: false,
+            },
             '^/login': {
                 target: 'https://localhost:7241/',
                 secure: false

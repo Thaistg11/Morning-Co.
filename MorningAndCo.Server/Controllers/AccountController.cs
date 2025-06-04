@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MorningAndCo.Server.Models; 
-using MorningAndCo.Server.DTOs;   // Replace with where your RegisterDto is
+using MorningAndCo.Server.DTOs;   
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -15,6 +16,7 @@ public class AccountController : ControllerBase
         _userManager = userManager;
     }
 
+   
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterDto model)
     {
@@ -23,7 +25,7 @@ public class AccountController : ControllerBase
 
         var user = new ApplicationUser
         {
-            UserName = model.Email,
+            UserName = model.Username,       
             Email = model.Email,
             FirstName = model.FirstName,
             Surname = model.Surname,
