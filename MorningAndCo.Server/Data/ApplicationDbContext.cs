@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MorningAndCo.Server.Models;
 
 namespace MorningAndCo.Server.Data
 {

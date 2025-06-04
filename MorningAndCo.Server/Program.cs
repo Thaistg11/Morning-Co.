@@ -3,6 +3,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MorningAndCo.Server.Data;
+using MorningAndCo.Server.Models;
 
 namespace MorningAndCo.Server
 {
