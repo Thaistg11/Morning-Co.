@@ -13,9 +13,9 @@
 }
 
 [data-theme='dark'] {
-    --bg-color: #121212;
+    --bg-color: black;
     --text-color: #eee;
-    --nav-bg-color: #222;
+    --nav-bg-color: black;
     --nav-link-color: #ddd;
     --btn-bg-color: #b7792f;
     --btn-text-color: white;
@@ -135,10 +135,9 @@ a.nav-link {
 }
 
 .nav-link a {
-    color: black;
+    color: var(--nav-link-color);
     font-size: 20px;
     text-decoration: none;
- 
 }
 
 

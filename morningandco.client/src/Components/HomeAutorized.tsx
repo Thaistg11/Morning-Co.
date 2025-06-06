@@ -12,7 +12,7 @@ const HomeAutorized = () => {
          
 
 
-            <input type="text" id="search-input" placeholder="Search..."/>
+            <input type="text" id="search-input" placeholder="Access My Profile..."/>
                 <button id="search-button"> Enter your ID</button>
 
         </div>
