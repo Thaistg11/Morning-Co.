@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDarkMode } from './hooks/useDarkMode';
 import Home from './Pages/Home.tsx';
 import Register from './Pages/Register.tsx';
 import Login from './Pages/Login.tsx';
@@ -11,10 +12,30 @@ import ContactUsPage from './Pages/ContactUsPage.tsx';
 
 
 
+
+
+
 function App() {
+    const { theme, toggleTheme } = useDarkMode();
+    
     return (
+
+         <>
+
+            <label className="switch" style={{ position: 'fixed', top: 10, right: 10, zIndex: 1000 }}>
+                <input
+                    type="checkbox"
+                    onChange={toggleTheme}
+                    checked={theme === 'dark'}
+                />
+                <span className="slider round"></span>
+            </label>
+
+
+
         <BrowserRouter>
             <Routes>
+
                 <Route path="/HomePage" element={<HomePage />} />
                 <Route path="/Menu" element={<MenuPage />} />
                 <Route path="/Locations" element={< LocationsPage />} />
@@ -26,7 +47,10 @@ function App() {
                 <Route path="/" element={<HomePage />} />
 
             </Routes>
-        </BrowserRouter>
+            </BrowserRouter>
+
+
+        </>
     );
 }
 

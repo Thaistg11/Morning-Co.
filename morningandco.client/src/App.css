@@ -1,8 +1,98 @@
-﻿
+﻿/* Start Theme*/
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --nav-bg-color: white;
+    --nav-link-color: black;
+    --btn-bg-color: #9d611d;
+    --btn-text-color: white;
+    --btn-hover-bg-color: black;
+    --container-bg-color: white;
+    --shadow-color: gray;
+    --footer-bg-color: #f1f1f1;
+}
+
+[data-theme='dark'] {
+    --bg-color: #121212;
+    --text-color: #eee;
+    --nav-bg-color: #222;
+    --nav-link-color: #ddd;
+    --btn-bg-color: #b7792f;
+    --btn-text-color: white;
+    --btn-hover-bg-color: #444;
+    --container-bg-color: #1e1e1e;
+    --shadow-color: #444;
+    --footer-bg-color: #111;
+}
+
+
+/* Rounded sliders */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: 0.4s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+}
+
+    .slider::before {
+        position: absolute;
+        content: '';
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+
+input:checked + .slider {
+    background-color: #9d611d;
+}
+
+    input:checked + .slider::before {
+        transform: translateX(26px);
+    }
+
+.slider.round {
+    border-radius: 34px;
+}
+
+    .slider.round::before {
+        border-radius: 50%;
+    }
+
+
+/*End Theme*/
+
+
 
 body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /*Start Weather Forecast*/
@@ -15,7 +105,7 @@ th, td {
 .containerbox {
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
-    background-color: white;
+    background-color: var(--container-bg-color);
     padding: 10px;
     text-align: left;
 }
@@ -23,7 +113,7 @@ th, td {
 /*Start NavBar*/
 
 .custom-nav {
-    background-color: white !important;
+    background-color: var(--nav-bg-color) !important;
 }
 
 
@@ -31,7 +121,7 @@ th, td {
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: black;
+    color: var(--text-color)
 }
 
 .navLogo {
@@ -40,9 +130,8 @@ th, td {
 }
 
 a.nav-link {
-    color: black;
+    color: var(--nav-link-color);
     font-size: 20px;
-   
 }
 
 .nav-link a {
@@ -83,7 +172,7 @@ a.nav-link {
     padding: 10px 20px;
     font-size: 20px;
     color: white;
-    background-color: #9d611d;
+    background-color: var(--btn-bg-color);
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -93,7 +182,7 @@ a.nav-link {
 }
 
 btn.hero-btn:hover {
-    background-color: black;
+    background-color: var(--btn-hover-bg-color);
     transform: scale(1.1);
 }
 
@@ -341,6 +430,45 @@ btn.hero-btn:hover {
 
 /*End Register Page*/
 
+/*Start HomeAutorized Page*/
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 250px;
+    transition: border-color 0.3s ease;
+}
+
+    #search-input:focus {
+        border-color: black;
+        outline: none;
+    }
+
+#search-button {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    #search-button:hover {
+        background-color: #0056b3;
+    }
+
+
+
+
+/*Start HomeAutorized Page*/
+
+
+
+
+
 
 /*Start Reservation Page*/
 .header-text {
@@ -352,6 +480,7 @@ btn.hero-btn:hover {
 /*Start Footer*/
 .custom-Footer {
     padding-bottom: 10px;
+    background-color: var(--footer-bg-color);
 }
 
     .fa {
@@ -364,10 +493,9 @@ btn.hero-btn:hover {
         color: white;
     }
 
-    footer.Font {
-        
-        color: white;
-    }
+footer.Font {
+    color: var(--text-color);
+}
 .footer-link{
     color:white;
 }
