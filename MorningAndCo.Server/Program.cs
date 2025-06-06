@@ -28,6 +28,10 @@ namespace MorningAndCo.Server
             });
 
             builder.Services.AddAuthorization();
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+            });
             builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 

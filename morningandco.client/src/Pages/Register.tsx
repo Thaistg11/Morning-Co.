@@ -84,6 +84,14 @@ function Register() {
                     } else {
                         setError(`Error registering: ${data?.message || text || "Unknown error"}`);
                     }
+                    if (!Firstname.trim()) {
+                        setError("First name is required.");
+                        return;
+                    }
+                    if (!Surname.trim()) {
+                        setError("Surname is required.");
+                        return;
+                    }
                 })
                 .catch((error) => {
                     console.error("Network error:", error);

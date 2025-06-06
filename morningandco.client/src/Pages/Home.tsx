@@ -1,5 +1,4 @@
-import WeatherForecast from "../Components/WeatherForecast.tsx";
-import LogoutLink from "../Components/LogoutLink.tsx";
+import HomeAutorized from "../Components/HomeAutorized.tsx";
 import NavBar from "../Components/NavBar.tsx";
 import AuthorizeView, { AuthorizedUser } from "../Components/AuthorizeView.tsx";
 import Footer from "../Components/Footer.tsx";
@@ -10,10 +9,14 @@ function Home() {
     return (
       
         <AuthorizeView>
-            <NavBar/>
-           
-            <WeatherForecast />
+            <NavBar />
 
+            <span className="contact-text font-weight-light mt-2"> Welcome, <AuthorizedUser value="email" />!</span>
+            
+
+            <HomeAutorized />
+
+     
 
            
             <Footer/>
@@ -25,3 +28,5 @@ function Home() {
 }
 
 export default Home;
+
+

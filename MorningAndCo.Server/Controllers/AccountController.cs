@@ -40,6 +40,11 @@ public class AccountController : ControllerBase
             return Ok(new { Message = "User registered successfully" });
         }
 
+        if (result.Errors.Any(e => e.Code == "DuplicateUserName" || e.Code == "DuplicateEmail"))
+        {
+            return BadRequest(new { message = "Email already in use" });
+        }
+
         return BadRequest(result.Errors);
     }
 }
