@@ -63,6 +63,14 @@ export default defineConfig({
                 target: 'https://localhost:7241',
                 secure: false,
             },
+            '/api/Account/me': {
+                target: 'https://localhost:7241',
+                secure: false,
+            },
+            '/api/Account/user/{id}': {
+                target: 'https://localhost:7241',
+                secure: false,
+            },
             '^/login': {
                 target: 'https://localhost:7241/',
                 secure: false

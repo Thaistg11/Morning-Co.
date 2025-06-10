@@ -4,6 +4,7 @@ using MorningAndCo.Server.Models;
 using MorningAndCo.Server.DTOs;   
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -25,7 +26,7 @@ public class AccountController : ControllerBase
 
         var user = new ApplicationUser
         {
-            UserName = model.Username,       
+            UserName = model.Username,
             Email = model.Email,
             FirstName = model.FirstName,
             Surname = model.Surname,
@@ -47,4 +48,40 @@ public class AccountController : ControllerBase
 
         return BadRequest(result.Errors);
     }
-}
+
+    [Authorize]
+    [HttpGet("me")]
+    public async Task<IActionResult> GetCurrentUserInfo()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var user = await _userManager.FindByIdAsync(userId);
+
+        if (user == null) return NotFound();
+
+        return Ok(new
+        {
+            Id = user.Id,
+            Email = user.Email
+        });
+    }
+
+  
+    [HttpGet("user/{id}")]
+    public async Task<IActionResult> GetUserById(string id)
+    {
+        var user = await _userManager.FindByIdAsync(id);
+
+        if (user == null) return NotFound();
+
+        return Ok(new
+        {
+            Id = user.Id,
+            UserName = user.UserName,
+            Email = user.Email,
+            FirstName = user.FirstName,
+            Surname = user.Surname,
+            DateOfBirth = user.DateOfBirth.ToString("yyyy-MM-dd")
+        });
+    }
+
+    }
