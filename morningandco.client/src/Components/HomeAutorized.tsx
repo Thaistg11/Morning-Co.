@@ -64,9 +64,11 @@ const HomeAuthorized: React.FC = () => {
     };
 
     return (
-        <div>
-           
+        <div className="homeAutorized-container">
 
+
+            <div className="search-container"> 
+            <div className="form-outline mb-4">
             <input
                 type="text"
                 id="search-input"
@@ -74,20 +76,26 @@ const HomeAuthorized: React.FC = () => {
                 value={searchId}
                 onChange={(e) => setSearchId(e.target.value)}
             />
-            <button id="search-button" onClick={handleSearch}>Search</button>
+                <button id="search-button" onClick={handleSearch}>Search</button>
+           
 
             {error && <p style={{ color: 'red' }}>{error}</p>}
+            </div>
+
+            <div className="mb-5">
 
             {userInfo && (
                 <div>
-                    <p>Id: {userInfo.id}</p>
-                    <p>Username: {userInfo.userName}</p>
-                    <p>Email: {userInfo.email}</p>
-                    <p>First Name: {userInfo.firstName}</p>
-                    <p>Last Name: {userInfo.surname}</p>
-                    <p>Date of Birth: {new Date(userInfo.dateOfBirth).toLocaleDateString()}</p>
+                    <p className="user-info">Id: {userInfo.id}</p>
+                    <p className="user-info">Username: {userInfo.userName}</p>
+                    <p className="user-info" >Email: {userInfo.email}</p>
+                    <p className="user-info">First Name: {userInfo.firstName}</p>
+                    <p className="user-info">Last Name: {userInfo.surname}</p>
+                    <p className="user-info">Date of Birth: {new Date(userInfo.dateOfBirth).toLocaleDateString()}</p>
                 </div>
-            )}
+                    )}
+                </div>
+            </div>
         </div>
     );
 };

@@ -10,11 +10,11 @@ function Home() {
       
         <AuthorizeView>
             <NavBar />
-
-            <span className="contact-text font-weight-light mt-2">
+            
+            <span className="contact-text font-weight-light mb-4">
                 Welcome, <AuthorizedUser value="email" />!
                 <br></br>
-                Your ID is: <AuthorizedUser value="id" />
+                Your ID is: <AuthorizedUser value="id" />.
             </span>
 
             <HomeAutorized />

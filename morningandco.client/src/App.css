@@ -430,6 +430,26 @@ btn.hero-btn:hover {
 /*End Register Page*/
 
 /*Start HomeAutorized Page*/
+
+.user-info {
+    font-size: 2rem;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    
+}
+
+.contact-text {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.homeAutorized-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 #search-input {
     padding: 10px;
     font-size: 16px;
