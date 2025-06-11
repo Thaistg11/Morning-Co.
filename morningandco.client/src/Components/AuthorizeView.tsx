@@ -3,9 +3,10 @@ import { Navigate } from 'react-router-dom';
 
 interface User {
     email: string;
+    id: string;
 }
 
-const emptyUser: User = { email: "" };
+const emptyUser: User = { email: "", id: "" };
 const UserContext = createContext<User>(emptyUser);
 
 function AuthorizeView(props: { children: React.ReactNode }) {
@@ -27,8 +28,8 @@ function AuthorizeView(props: { children: React.ReactNode }) {
 
                 if (response.status === 200) {
                     console.log("Authorized");
-                    const data: User = await response.json(); // <-- typed as User
-                    setUser({ email: data.email });
+                    const data = await response.json();
+                    setUser({ email: data.email, id: data.id });
                     setAuthorized(true);
                     return response;
                 } else if (response.status === 401) {
@@ -48,7 +49,7 @@ function AuthorizeView(props: { children: React.ReactNode }) {
             }
         };
 
-        fetchWithRetry("/pingauth", {
+        fetchWithRetry("/api/Account/me", {
             method: "GET",
         })
             .catch((error) => {
@@ -78,13 +79,10 @@ function AuthorizeView(props: { children: React.ReactNode }) {
 export function AuthorizedUser(props: { value: string }) {
     const user = React.useContext(UserContext);
 
-    if (props.value === "email") {
-        return <>{user.email}</>;
-    }
+    if (props.value === "email") return <>{user.email}</>;
+    if (props.value === "id") return <>{user.id}</>;
 
     return null;
 }
-
-export { UserContext };
 
 export default AuthorizeView;

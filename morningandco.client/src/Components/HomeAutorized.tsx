@@ -14,7 +14,7 @@ const HomeAuthorized: React.FC = () => {
     const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
     const [searchId, setSearchId] = useState('');
     const [error, setError] = useState('');
-    const [userId, setUserId] = useState<string>('');
+    
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -35,7 +35,6 @@ const HomeAuthorized: React.FC = () => {
             .then(data => {
                 console.log("User ID from backend:", data);
                 const actualId = data.id || data.Id;
-                setUserId(actualId);
                 setSearchId(actualId);
             })
             .catch((err) => setError(err.message));
@@ -66,8 +65,7 @@ const HomeAuthorized: React.FC = () => {
 
     return (
         <div>
-            <pre>{JSON.stringify({ userId, searchId, error }, null, 2)}</pre>
-            <p><strong>Your ID:</strong> {userId ? userId : 'Loading...'}</p>
+           
 
             <input
                 type="text"

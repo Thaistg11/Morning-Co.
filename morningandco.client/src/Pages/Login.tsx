@@ -53,10 +53,9 @@ function Login() {
         if (!email || !password) {
             setError("Please fill in all fields.");
         } else {
-            // clear error message
+            
             setError("");
-            // post data to the /register api
-
+            
             let loginurl = "";
             if (rememberme == true)
                 loginurl = "/login?useCookies=true";

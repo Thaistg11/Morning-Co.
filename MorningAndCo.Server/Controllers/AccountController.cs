@@ -49,7 +49,10 @@ public class AccountController : ControllerBase
         return BadRequest(result.Errors);
     }
 
-    [Authorize]
+
+
+
+
     [HttpGet("me")]
     public async Task<IActionResult> GetCurrentUserInfo()
     {

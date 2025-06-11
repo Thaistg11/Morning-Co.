@@ -11,8 +11,11 @@ function Home() {
         <AuthorizeView>
             <NavBar />
 
-            <span className="contact-text font-weight-light mt-2"> Welcome, <AuthorizedUser value="email" />!</span>
-            
+            <span className="contact-text font-weight-light mt-2">
+                Welcome, <AuthorizedUser value="email" />!
+                <br></br>
+                Your ID is: <AuthorizedUser value="id" />
+            </span>
 
             <HomeAutorized />
 
