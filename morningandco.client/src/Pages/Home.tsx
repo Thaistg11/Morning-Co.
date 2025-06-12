@@ -1,5 +1,5 @@
 import HomeAutorized from "../Components/HomeAutorized.tsx";
-import NavBar from "../Components/NavBar.tsx";
+import NavBarUser from "../Components/NavBarUser.tsx";
 import AuthorizeView, { AuthorizedUser } from "../Components/AuthorizeView.tsx";
 import Footer from "../Components/Footer.tsx";
 
@@ -9,7 +9,7 @@ function Home() {
     return (
       
         <AuthorizeView>
-            <NavBar />
+            <NavBarUser />
             
             <span className="contact-text font-weight-light mb-4">
                 Welcome, <AuthorizedUser value="email" />!

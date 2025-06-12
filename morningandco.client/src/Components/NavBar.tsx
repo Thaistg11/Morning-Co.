@@ -1,4 +1,3 @@
-import '../App.css';
 import React from 'react';
 import LogoMiniImg from '../Img/LogoMini.png';
 import { Link } from 'react-router-dom';
