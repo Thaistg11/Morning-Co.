@@ -19,7 +19,7 @@ function Login() {
     useEffect(() => {
         fetch("/pingauth", {
             method: "GET",
-            credentials: "include", // include cookies in the request
+            credentials: "include", 
         })
             .then((res) => {
                 if (res.status === 200) {

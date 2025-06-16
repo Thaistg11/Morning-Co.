@@ -64,6 +64,7 @@ const HomeAuthorized: React.FC = () => {
     };
 
     return (
+        <div> 
         <div className="homeAutorized-container">
 
 
@@ -96,6 +97,8 @@ const HomeAuthorized: React.FC = () => {
                     )}
                 </div>
             </div>
+            </div>
+          
         </div>
     );
 };

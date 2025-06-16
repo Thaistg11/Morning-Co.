@@ -40,64 +40,71 @@ function Register() {
         e.preventDefault();
         // validate email and passwords
 
-        if (!email || !password || !confirmPassword || !username || !Firstname || !Surname ) { 
+        // --- Client-side validation ---
+        if (!email || !password || !confirmPassword || !username || !Firstname || !Surname) {
             setError("Please fill in all fields.");
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            setError("Please enter a valid email address.");
-        } else if (password !== confirmPassword) {
-            setError("Passwords do not match.");
-
-        } else {
-            // clear error message
-            setError("");
-            console.log(typeof DateOfBirth, DateOfBirth);
-            // post data to the /register api
-            fetch("api/Account/register", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    Email: email,
-                    Password: password,
-                    Username: username,
-                    FirstName: Firstname,
-                    Surname: Surname,
-                    DateOfBirth: DateOfBirth, 
-
-                }),
-            })
-                .then(async (response) => {
-                    const text = await response.text(); // read raw response text
-                    console.log("Response status:", response.status);
-                    console.log("Raw response text:", text);
-
-                    let data;
-                    try {
-                        data = JSON.parse(text); // try parse JSON
-                    } catch {
-                        data = null;
-                    }
-
-                    if (response.ok) {
-                        setError("Successful register.");
-                    } else {
-                        setError(`Error registering: ${data?.message || text || "Unknown error"}`);
-                    }
-                    if (!Firstname.trim()) {
-                        setError("First name is required.");
-                        return;
-                    }
-                    if (!Surname.trim()) {
-                        setError("Surname is required.");
-                        return;
-                    }
-                })
-                .catch((error) => {
-                    console.error("Network error:", error);
-                    setError("Error registering.");
-                });
+            return;
         }
+
+        if (!Firstname.trim()) {
+            setError("First name is required.");
+            return;
+        }
+
+        if (!Surname.trim()) {
+            setError("Surname is required.");
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            setError("Please enter a valid email address.");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            setError("Passwords do not match.");
+            return;
+        }
+
+        // --- If validation passes ---
+        setError(""); // Clear previous errors
+
+        fetch("api/Account/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                Email: email,
+                Password: password,
+                Username: username,
+                FirstName: Firstname,
+                Surname: Surname,
+                DateOfBirth: DateOfBirth,
+            }),
+        })
+            .then(async (response) => {
+                const text = await response.text();
+                console.log("Response status:", response.status);
+                console.log("Raw response text:", text);
+
+                let data;
+                try {
+                    data = JSON.parse(text);
+                } catch {
+                    data = null;
+                }
+
+                if (response.ok) {
+                    setError("Successful register.");
+                } else {
+                    setError(`Error registering: ${data?.message || text || "Unknown error"}`);
+                }
+            })
+            .catch((error) => {
+                console.error("Network error:", error);
+                setError("Error registering.");
+            });
     };
 
     return (
