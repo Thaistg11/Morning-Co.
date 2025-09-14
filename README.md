@@ -1,0 +1,84 @@
+# Morning and Co
+
+## Introduction
+Morning and Co is a full-stack web application built with React and ASP.NET Core 8, designed to provide an engaging and seamless user experience in a coffee shop environment. The platform includes secure authentication with ASP.NET Identity, customizable navigation, dynamic light and dark themes, and integration with external services such as the Google Maps API. The result is a reliable, interactive, and user-friendly system.
+
+---
+
+## Features
+- **Secure Authentication** – Login and registration with ASP.NET Identity using session and cookie-based authentication.  
+- **Profile Management** – Retrieve and display user details including ID, email, and personal information.  
+- **Theme Toggle** – Switch between light and dark modes with preferences stored in localStorage.  
+- **Customizable Navigation** – Users can control which links (Menu, Locations, Reservations) appear in the navigation bar.  
+- **Data Security** – Personal details are delivered via secure, protected API endpoints.  
+- **Google Maps Integration** – Displays the coffee shop’s location with interactive markers and address details.  
+- **Dynamic Homepage** – A homepage featuring a Bootstrap carousel, About Us section, and responsive photo gallery.  
+
+---
+
+## Technologies Used
+- **Frontend:** React, React Hooks, CSS Variables, Bootstrap, @react-google-maps/api  
+- **Backend:** ASP.NET Core 8, Entity Framework Core, ASP.NET Identity  
+- **Database:** SQL Server (Identity and application data)  
+- **APIs:** Google Maps API  
+- **Authentication:** Cookie/session-based authentication  
+- **Tools:** Swagger UI for API documentation and testing  
+
+---
+
+## Application Workflow
+
+### Login
+- User credentials are submitted through a React form to the `/login` endpoint.  
+- Session or cookie-based authentication is supported.  
+- Authenticated users are redirected to protected pages such as `/HomeAuthorized`.  
+
+### Registration
+- Users register with first name, surname, date of birth, email, username, and password.  
+- Client-side validation ensures required fields are valid.  
+- The AccountController and UserManager securely persist data in the Identity database.  
+
+### Personal Information Retrieval
+- Authenticated users can retrieve their details including ID, email, and personal data.  
+- React components fetch and display this data securely using Bearer token authentication.  
+
+### Theme Toggle
+- Users can switch between light and dark themes.  
+- Preferences are stored in localStorage and applied dynamically.  
+
+### Navigation
+- Users can choose which navigation items to display.  
+- The navigation adapts to both mobile and desktop devices.  
+- Authentication context ensures options are available only when logged in.  
+
+### Google Maps
+- Integrated using the Google Maps JavaScript API.  
+- Displays the coffee shop location with markers and address details.  
+
+### Homepage
+- Includes a Bootstrap carousel, About Us section, and responsive photo gallery.  
+- Navigation is handled through React Router.  
+
+---
+
+## Backend Configuration
+- Configured with Entity Framework Core and SQL Server.  
+- Defines CORS policies for frontend-backend communication.  
+- Configures ASP.NET Identity with unique email enforcement.  
+- Middleware manages HTTPS redirection, static files, and authorization.  
+- Custom API endpoints include:  
+  - `/logout` – Logs users out securely.  
+  - `/pingauth` – Returns the authenticated user’s email.  
+- Swagger UI is enabled for documentation and testing during development.  
+
+---
+
+## Future Enhancements
+- **Client-Side Table Booking** – A page for users to book tables directly.  
+- **Contact Us Page** – A fully functional form to allow users to send inquiries.  
+
+---
+
+## Author
+Thais Guide  
+Developed as part of a full-stack web application training project.
