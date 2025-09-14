@@ -5,6 +5,29 @@ Morning and Co is a full-stack web application built with React and ASP.NET Core
 
 ---
 
+## Table of Contents
+1. [Introduction](#introduction)  
+2. [Features](#features)  
+   - [Secure Authentication](#secure-authentication)  
+   - [Profile Management](#profile-management)  
+   - [Theme Toggle](#theme-toggle)  
+   - [Customizable Navigation](#customizable-navigation)  
+   - [Google Maps Integration](#google-maps-integration)  
+   - [Dynamic Homepage](#dynamic-homepage)  
+3. [Technologies Used](#technologies-used)  
+4. [Application Workflow](#application-workflow)  
+   - [Login](#login)  
+   - [Registration](#registration)  
+   - [Personal Information Retrieval](#personal-information-retrieval)  
+   - [Theme Toggle](#theme-toggle-1)  
+   - [Navigation](#navigation)  
+   - [Google Maps](#google-maps)  
+   - [Homepage](#homepage)  
+5. [Backend Configuration](#backend-configuration)  
+6. [Future Enhancements](#future-enhancements)  
+7. [Author](#author)  
+
+
 ## Features
 - **Secure Authentication** – Login and registration with ASP.NET Identity using session and cookie-based authentication.  
 - **Profile Management** – Retrieve and display user details including ID, email, and personal information.  
