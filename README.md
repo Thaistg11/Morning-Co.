@@ -1,7 +1,8 @@
 # Morning and Co
 
 ## Introduction
-Morning and Co is a full-stack web application built with React and ASP.NET Core 8, designed to provide an engaging and seamless user experience in a coffee shop environment. The platform includes secure authentication with ASP.NET Identity, customizable navigation, dynamic light and dark themes, and integration with external services such as the Google Maps API. The result is a reliable, interactive, and user-friendly system.
+Morning and Co is a full-stack web application built with React and ASP.NET Core 8, designed to provide an engaging and seamless user experience in a coffee shop environment. The platform includes secure authentication with ASP.NET Identity, customizable navigation, dynamic light and dark themes, and integration with external services such as the Google Maps API. The backend is designed to expose RESTful APIs that the frontend consumes, emphasizing modularity and scalability. The result is a reliable, interactive, and user-friendly system.
+
 
 ---
 
