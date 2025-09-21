@@ -1,8 +1,10 @@
 # Morning and Co
 
+
 ## Introduction
 Morning and Co is a full-stack web application built with React and ASP.NET Core 8, designed to provide an engaging and seamless user experience in a coffee shop environment. The platform includes secure authentication with ASP.NET Identity, customizable navigation, dynamic light and dark themes, and integration with external services such as the Google Maps API. The backend is designed to expose RESTful APIs that the frontend consumes, emphasizing modularity and scalability. The result is a reliable, interactive, and user-friendly system.
 
+![Homepage Screenshot](https://raw.githubusercontent.com/Thaistg11/Morning-Co./51ecf91877bea5ecf0e7aa375d7b87d115e88644/morningandco.client/ImagesReadMe/HomeContainer-%20Screenshot.png)
 
 ---
 
@@ -55,33 +57,83 @@ Morning and Co is a full-stack web application built with React and ASP.NET Core
 ### Login
 - User credentials are submitted through a React form to the `/login` endpoint.  
 - Session or cookie-based authentication is supported.  
-- Authenticated users are redirected to protected pages such as `/HomeAuthorized`.  
+- Authenticated users are redirected to protected pages such as `/HomeAuthorized`.
+
+
+![Login Page](https://raw.githubusercontent.com/Thaistg11/Morning-Co./51ecf91877bea5ecf0e7aa375d7b87d115e88644/morningandco.client/ImagesReadMe/Login-%20Page.png)
+
+
+
+---
+
+
 
 ### Registration
 - Users register with first name, surname, date of birth, email, username, and password.  
 - Client-side validation ensures required fields are valid.  
-- The AccountController and UserManager securely persist data in the Identity database.  
+- The AccountController and UserManager securely persist data in the Identity database.
+
+ 
+ ![Profile Screenshot](https://raw.githubusercontent.com/Thaistg11/Morning-Co./51ecf91877bea5ecf0e7aa375d7b87d115e88644/morningandco.client/ImagesReadMe/Register%20-%20Page.png)
+
+
+
+ ---
+
+
 
 ### Personal Information Retrieval
 - Authenticated users can retrieve their details including ID, email, and personal data.  
-- React components fetch and display this data securely using Bearer token authentication.  
+- React components fetch and display this data securely using Bearer token authentication.
+
+![Profile Workflow](https://raw.githubusercontent.com/Thaistg11/Morning-Co./51ecf91877bea5ecf0e7aa375d7b87d115e88644/morningandco.client/ImagesReadMe/Home%20Autorized%20-Page%202.png)
+
+
+
+---
+
+
 
 ### Theme Toggle
 - Users can switch between light and dark themes.  
-- Preferences are stored in localStorage and applied dynamically.  
+- Preferences are stored in localStorage and applied dynamically.
+
+![Theme Toggle Workflow]( https://raw.githubusercontent.com/Thaistg11/Morning-Co./51ecf91877bea5ecf0e7aa375d7b87d115e88644/morningandco.client/ImagesReadMe/Login%20Dark%20Mode-%20Page.png)
+
+
+  ----
+
+  
 
 ### Navigation
 - Users can choose which navigation items to display.  
 - The navigation adapts to both mobile and desktop devices.  
-- Authentication context ensures options are available only when logged in.  
+- Authentication context ensures options are available only when logged in.
+
+
+![Navigation Workflow](https://raw.githubusercontent.com/Thaistg11/Morning-Co./47dfcb5ecd1837d07f7632580bcac3e7177b30b5/morningandco.client/ImagesReadMe/Hide%20Nav.png)
+
+
+---
 
 ### Google Maps
 - Integrated using the Google Maps JavaScript API.  
-- Displays the coffee shop location with markers and address details.  
+- Displays the coffee shop location with markers and address details.
+
+
+![Maps Workflow](https://raw.githubusercontent.com/Thaistg11/Morning-Co./51ecf91877bea5ecf0e7aa375d7b87d115e88644/morningandco.client/ImagesReadMe/Location-%20Page.png)
+
+
+---
+
+
 
 ### Homepage
 - Includes a Bootstrap carousel, About Us section, and responsive photo gallery.  
-- Navigation is handled through React Router.  
+- Navigation is handled through React Router.
+
+  ![Homepage Workflow](https://raw.githubusercontent.com/Thaistg11/Morning-Co./51ecf91877bea5ecf0e7aa375d7b87d115e88644/morningandco.client/ImagesReadMe/Home%20Container-%20Page.png)
+
 
 ---
 
